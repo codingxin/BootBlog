@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf in action</title>
+</head>
+<body>
+<div th:replace="~{fragments/header ::  header}"></div>
+<h3 th:text="${userModel.title}">静态显示文本被覆盖</h3>
+<!--<form action="/users" ></form> 都可以-->
+<form action="/users" th:action="@{/users}" method="post">
+    <input type="hidden" name="id">
+    名称:<br>
+    <input type="text" name="name">
+    邮箱:<br>
+    <input type="text" name="email">
+    <input type="submit" value="提交">
+</form>
+
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
