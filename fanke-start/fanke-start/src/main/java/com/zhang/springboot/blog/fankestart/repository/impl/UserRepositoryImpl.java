@@ -17,8 +17,8 @@ import java.util.concurrent.atomic.AtomicLong;
  * @备注 实现 User各种方法
  **/
 //@Repository对应数据访问层Bean ，例如：
-@Repository
-public class UserRepositoryImpl implements UserRepository {
+//@Repository
+public class UserRepositoryImpl  {
     //唯一标示id，用于计数。每次递增
     private static AtomicLong counter=new AtomicLong();
     //ConcurrentHashMap它是HashMap的一个线程安全的、支持高效并发的版本
@@ -27,7 +27,7 @@ public class UserRepositoryImpl implements UserRepository {
      */
     private final ConcurrentMap<Long, User> userMap = new ConcurrentHashMap<>();
 
-    @Override
+
     public User saveOrUpdateUser(User user) {
         Long id=user.getId();
         if(id==null) {
@@ -39,17 +39,17 @@ public class UserRepositoryImpl implements UserRepository {
         return user;
     }
 
-    @Override
+
     public void deleteUser(Long id) {
         this.userMap.remove(id);
     }
 
-    @Override
+
     public User getUserById(Long id) {
         return userMap.get(id);
     }
 
-    @Override
+
     public List<User> listUser() {
         //new ArrayList<类型>(包装的数据)
         return new ArrayList<User>(this.userMap.values());

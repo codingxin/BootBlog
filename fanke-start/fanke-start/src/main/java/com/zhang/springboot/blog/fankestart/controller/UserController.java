@@ -41,11 +41,10 @@ public class UserController {
     @GetMapping
     public ModelAndView list(Model model) {
         System.out.println("123");
-        model.addAttribute("userList", userRepository.listUser());
+        model.addAttribute("userList", userRepository.findAll());
         model.addAttribute("title", "用户管理");
         return new ModelAndView("users/list", "userModel", model);
     }
-
 
     /**
      * 根据id来查询用户
@@ -56,7 +55,7 @@ public class UserController {
      */
     @GetMapping("{id}")  //默认 id为字符串String类型
     public ModelAndView finduserByid(@PathVariable("id") Long id, Model model) {
-        User user = userRepository.getUserById(id);
+        User user = userRepository.findById(id).get();
         model.addAttribute("user", user);
         model.addAttribute("title", "查看用户");
         return new ModelAndView("users/view", "userModel", model);
@@ -70,16 +69,51 @@ public class UserController {
      */
     @GetMapping("/form")
     public ModelAndView createForm(Model model) {
-        model.addAttribute("user", new User());
+        model.addAttribute("user", new User(null, null, null));
         model.addAttribute("title", "创建用户");
         return new ModelAndView("users/form", "userModel", model);
     }
 
+    /**
+     * 修改页面
+     *
+     * @param model
+     * @return
+     */
+    @GetMapping("/modify/{id}")
+    public ModelAndView modifyusers(@PathVariable("id") Long id, Model model) {
+        User user = userRepository.findById(id).get();
+        model.addAttribute("user", user);
+        model.addAttribute("title", "修改用户");
+        return new ModelAndView("users/form", "userModel", model);
+    }
+
+
+    /**
+     * 表单提交保存数据
+     *
+     * @param user
+     * @param model
+     * @return
+     */
     @PostMapping
     public ModelAndView saveOrUpdateUser(User user, Model model) {
-        user = userRepository.saveOrUpdateUser(user);   //新建的用户，给他赋值id
+        user = userRepository.save(user);   //最初方法新建的用户，给他赋值id
         return new ModelAndView("users/form", "userModel", model);
-
     }
+
+    /**
+     * 删除用户
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/delete/{id}")
+    public ModelAndView delete(@PathVariable("id") Long id) {
+        //userRepository.deleteUser(id);
+        //Modelandview 设置重定向
+        return new ModelAndView("redirect:/users");
+    }
+
 
 }

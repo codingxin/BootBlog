@@ -13,10 +13,7 @@ buildscript {
     }
 
 }
-bootRun {
-//开启页面热加载功能
-    addResources = true
-}
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
@@ -42,7 +39,11 @@ dependencies {
 // https://mvnrepository.com/artifact/nz.net.ultraq.thymeleaf/thymeleaf-layout-dialect
     compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.3.0'
 
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
 
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.6.RELEASE'
+    runtime('com.h2database:h2:1.4.197')
 
     implementation('org.springframework.boot:spring-boot-starter-web')
     testImplementation('org.springframework.boot:spring-boot-starter-test')

@@ -7,14 +7,17 @@
 </head>
 <body>
 <div th:replace="~{fragments/header ::  header}"></div>
-<h3 th:text="${userModel.title}">静态显示文本被覆盖</h3>
+<!--<h3 th:text="${userModel.title}"></h3>-->
 <!--<form action="/users" ></form> 都可以-->
-<form action="/users" th:action="@{/users}" method="post">
-    <input type="hidden" name="id">
+<!--th:object拿到user变量-->
+<form action="/users" th:action="@{/users}" method="post" th:object="${userModel.user}">
+   <!-- <input type="hidden" name="id" th:value="${userModel.user.id}">-->
+    <!--两种都可以找到id，下面采用选择表达式-->
+    <input type="hidden" name="id" th:value="*{id}">
     名称:<br>
-    <input type="text" name="name">
+    <input type="text" name="name" th:value="*{name}"><br>
     邮箱:<br>
-    <input type="text" name="email">
+    <input type="text" name="email" th:value="*{email}">
     <input type="submit" value="提交">
 </form>
 
