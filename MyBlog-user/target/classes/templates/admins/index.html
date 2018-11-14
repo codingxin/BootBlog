@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="~{fragments/header :: header}">
+</head>
+<body>
+<h1>这是admin主页</h1>
+<!-- Page Content -->
+<div class="container blog-content-container">
+
+    <div class="row">
+
+        <!-- 左侧栏目 -->
+        <div class="col-md-4 col-xl-3">
+            <!-- 分类 -->
+            <div class="card ">
+                <h5 class="card-header"><i class="fa fa-bars" aria-hidden="true"></i> 菜单</h5>
+
+                 <!--<ul class="list-group blog-menu" th:each="menu : ${model.list}">
+                      <a href="javascript:void(0)" class="list-group-item"
+                         th:title="${menu.name}" th:text="${menu.name}" th:attr="url=${menu.url}">-->
+
+                <ul class="list-group blog-menu">
+                    <a href="javascript:void(0)" class="list-group-item"
+                      >
+                        用户管理
+                    </a>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- 右侧栏目 -->
+
+
+        <div class="col-md-8 col-xl-9">
+            <div class="card" id="rightContainer">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- /.container -->
+
+
+<div th:replace="~{fragments/footer :: footer}">...</div>
+
+<script src="../../static/js/admins/main.js" th:src="@{/js/admins/main.js}"></script>
+<script src="../../static/js/users/main.js" th:src="@{/js/users/main.js}">
+</body>
+</html>

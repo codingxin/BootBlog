@@ -45,18 +45,14 @@ public class BlogServiceImpl implements BlogService {
 		blogRepository.delete(id);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.waylau.spring.boot.blog.service.BlogService#updateBlog(com.waylau.spring.boot.blog.domain.Blog)
-	 */
+
 	@Transactional
 	@Override
 	public Blog updateBlog(Blog blog) {
 		return blogRepository.save(blog);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.waylau.spring.boot.blog.service.BlogService#getBlogById(java.lang.Long)
-	 */
+
 	@Override
 	public Blog getBlogById(Long id) {
 		return blogRepository.findOne(id);

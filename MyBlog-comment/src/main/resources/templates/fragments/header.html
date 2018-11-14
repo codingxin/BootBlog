@@ -74,14 +74,14 @@
             </ul>
             <div sec:authorize="isAuthenticated()"  class="row" >
                 <div class="dropdown">
-                    <a class=" dropdown-toggle" href="/u/waylau" th:href="@{'/u/' + ${#authentication.name}}" data-toggle="dropdown"><span sec:authentication="name"></span></a>
+                    <a class=" dropdown-toggle" href="/u/zhang" th:href="@{'/u/' + ${#authentication.name}}" data-toggle="dropdown"><span sec:authentication="name"></span></a>
                     <div class="dropdown-menu" >
-                        <a class=" dropdown-item" href="/u/waylau" th:href="@{'/u/' + ${#authentication.name}}">个人主页</a>
-                        <a class="dropdown-item" href="/u/waylau/profile" th:href="@{'/u/' + ${#authentication.name}} + '/profile'" >个人设置</a>
+                        <a class=" dropdown-item" href="/u/zhang" th:href="@{'/u/' + ${#authentication.name}}">个人主页</a>
+                        <a class="dropdown-item" href="/u/zhang/profile" th:href="@{'/u/' + ${#authentication.name}} + '/profile'" >个人设置</a>
                     </div>
                 </div>
                 <div>
-                    <a href="/u/waylau/blogs/edit" th:href="'/u/' + ${#authentication.name} + '/blogs/edit'" class="btn btn-outline-success my-2 my-sm-0">写博客</a>
+                    <a href="/u/zhang/blogs/edit" th:href="'/u/' + ${#authentication.name} + '/blogs/edit'" class="btn btn-outline-success my-2 my-sm-0">写博客</a>
                 </div>
 
                 <form action="/logout" th:action="@{/logout}" method="post">

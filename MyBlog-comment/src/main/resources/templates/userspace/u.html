@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <span>
-                      <a href="/u/waylau" th:href="'/u/' + ${user.username}" title="waylau" th:title="${user.username}" >
+                      <a href="/u/zhang" th:href="'/u/' + ${user.username}" title="waylau" th:title="${user.username}" >
                         <img th:src="${user.avatar} == null ? '/images/avatar-defualt.jpg' : ${user.avatar} "
                              class="blog-avatar-230">
                       </a>
@@ -108,7 +108,7 @@
                     <div class="card mb-4" th:each="blog : ${blogList}">
                         <div class="card-block">
                             <h2 class="card-title">
-                                <a href="/u/waylau/blogs/1" class="card-link" title="waylau"
+                                <a href="/u/zhang/blogs/1" class="card-link" title="waylau"
                                    th:href="'/u/' + ${blog.user.username} + '/blogs/'+ ${blog.id}"  th:title="${blog.user.username}" th:text="${blog.title}">
                                     OAuth 2.0 认证的原理与实践
                                 </a>

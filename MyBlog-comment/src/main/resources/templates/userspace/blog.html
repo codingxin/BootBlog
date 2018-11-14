@@ -19,21 +19,21 @@
                 <div class="card-block">
                     <h2 class="card-title">
 							<span>
-			                  <a href="/u/waylau" title="waylau" th:href="'/u/' + ${blogModel.user.username}"  th:title="${blogModel.user.username}" >
+			                  <a href="/u/zhang" title="waylau" th:href="'/u/' + ${blogModel.user.username}"  th:title="${blogModel.user.username}" >
 			                    <img src="/images/avatar-defualt.jpg" th:src="${blogModel.user.avatar} == null ? '/images/avatar-defualt.jpg' : ${blogModel.user.avatar}" class="blog-avatar-50">
 			                  </a>
 					        </span>
-                        <a href="/u/waylau/blogs/1" class="card-link" title="waylau"
+                        <a href="/u/zhang/blogs/1" class="card-link" title="waylau"
                            th:href="'/u/' + ${blogModel.user.username} + '/blogs/'+ ${blogModel.id}"  th:title="${blogModel.user.username}" th:text="${blogModel.title}">
                             OAuth 2.0 认证的原理与实践
                         </a>
                     </h2>
                     <div class="card-text">
-                        <a href="/u/waylau" th:href="'/u/' + ${blogModel.user.username}" class="card-link" th:text="${blogModel.user.username}" >waylau</a> 发表于 [[${#dates.format(blogModel.createTime, 'yyyy-MM-dd HH:mm')}]]
+                        <a href="/u/zhang" th:href="'/u/' + ${blogModel.user.username}" class="card-link" th:text="${blogModel.user.username}" >waylau</a> 发表于 [[${#dates.format(blogModel.createTime, 'yyyy-MM-dd HH:mm')}]]
                         <i class="fa fa-eye" aria-hidden="true">[[${blogModel.readSize}]]</i>
                         <i class="fa fa-heart-o" aria-hidden="true">[[${blogModel.voteSize}]]</i>
                         <i class="fa fa-comment-o" aria-hidden="true">[[${blogModel.commentSize}]]</i>
-                        <a href="/u/waylau" th:if="${isBlogOwner}" th:href="'/u/' + ${blogModel.user.username}+ '/blogs/edit/'+ ${blogModel.id}" class="btn btn-primary float-right">编辑</a>
+                        <a href="/u/zhang" th:if="${isBlogOwner}" th:href="'/u/' + ${blogModel.user.username}+ '/blogs/edit/'+ ${blogModel.id}" class="btn btn-primary float-right">编辑</a>
                         <a href="javascript:void(0)" th:if="${isBlogOwner}" class="btn btn-primary float-right blog-delete-blog">删除</a>
                     </div>
                     <hr>
@@ -72,13 +72,13 @@
                     <div class="row" id="mainContainerRepleace" th:each="comment,commentStat : ${comments}" th:object="${comment}">
                         <h2 class="card-title col-lg-1 col-md-2">
 							<span>
-			                  <a href="/u/waylau" th:href="'/u/'+ *{user.username}" title="waylau" th:title="*{user.username}">
+			                  <a href="/u/zhang" th:href="'/u/'+ *{user.username}" title="waylau" th:title="*{user.username}">
 			                    <img src="/images/avatar-defualt.jpg" th:src="*{user.avatar} == null ? '/images/avatar-defualt.jpg' : *{user.avatar}" class="blog-avatar-50">
 			                  </a>
 					        </span>
                         </h2>
                         <div class="card-text col-lg-11 col-md-10">
-                            <a href="/u/waylau" th:href="'/u/'+ *{user.username}" class="card-link" th:text="*{user.username}">waylau</a> [[${commentStat.index} + 1]]楼  [[${#dates.format(comment.createTime, 'yyyy-MM-dd HH:mm')}]]
+                            <a href="/u/zhang" th:href="'/u/'+ *{user.username}" class="card-link" th:text="*{user.username}">waylau</a> [[${commentStat.index} + 1]]楼  [[${#dates.format(comment.createTime, 'yyyy-MM-dd HH:mm')}]]
                             <a href="javascript:void(0)" class="blog-delete-comment" th:if="${commentOwner} eq *{user.username}" th:attr="commentId=*{id}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                             <p th:text="*{content}">不错哦，顶起！</p>
                         </div>

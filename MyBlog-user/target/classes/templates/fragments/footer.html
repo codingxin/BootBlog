@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf in action</title>
+</head>
+<body>
+<footer class="blog-footer bg-inverse" data-th-fragment="footer">
+    <a id="goToTop" href="#">
+        <i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i>
+    </a>
+    <div class="container">
+        <p class="m-0 text-center text-white">© 2018 <a href="#">Zhangdazhuang.com</a></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../../static/js/jquery-3.1.1.min.js" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <script src="../../static/js/jquery.form.min.js" th:src="@{/js/jquery.form.min.js}"></script>
+    <script src="../../static/js/tether.min.js" th:src="@{/js/tether.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <script src="../../static/js/nprogress.js" th:src="@{/js/nprogress.js}"></script>
+    <script src="../../static/js/thinker-md.vendor.min.js" th:src="@{/js/thinker-md.vendor.min.js}"></script>
+    <script src="../../static/js/bootstrap-tagsinput.js" th:src="@{/js/jquery.tagsinput.min.js}"></script>
+    <script src="../../static/js/chosen.jquery.js" th:src="@{/js/chosen.jquery.js}"></script>
+    <script src="../../static/js/toastr.min.js" th:src="@{/js/toastr.min.js}"></script>
+    <script src="../../static/js/cropbox.js" th:src="@{/js/cropbox.js}"></script>
+    <script src="../../static/js/thymeleaf-bootstrap-paginator.js"
+            th:src="@{/js/thymeleaf-bootstrap-paginator.js}"></script>
+    <script src="../../static/js/catalog-generator.js" th:src="@{/js/catalog-generator.js}"></script>
+    <script src="../../static/js/main.js" th:src="@{/js/main.js}"></script>
+   <script  src="../../static/js/my.js" th:src="@{/js/my.js}"></script>
+</footer>
+
+</body>
+</html>

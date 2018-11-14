@@ -27,6 +27,8 @@ $(function() {
 				 $("#mainContainer").html(data);
 		     },
 		     error : function() {
+			 /*	<script src="<%=path%>/res/toastr/toastr.min.js"></script>
+                  <link rel="stylesheet" href="<%=path%>/res/toastr/toastr.min.css">*/
 		    	 toastr.error("error!");
 		     }
 		 });

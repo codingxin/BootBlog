@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:replace="~{fragments/header :: header}">
+</head>
+<body>
+<div class="container blog-content-container">
+<!--    <h3 th:text="${userModel.title}"></h3>-->
+    <!--<form action="/users" ></form> 都可以-->
+    <!--th:object拿到user变量-->
+    <form action="/users" th:action="@{/users}" method="post" th:object="${userModel.user}">
+        <!-- <input type="hidden" name="id" th:value="${userModel.user.id}">-->
+        <!--两种都可以找到id，下面采用选择表达式-->
+        <input type="hidden" name="id" th:value="*{id}">
+        名称:<br>
+        <input type="text" class="form-control" name="name" th:value="*{name}"><br>
+        邮箱:<br>
+        <input type="text" class="form-control" name="email" th:value="*{email}">
+        <br>
+        <input class="btn btn-default" type="submit" value="提交">
+    </form>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

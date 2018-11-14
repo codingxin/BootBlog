@@ -20,6 +20,7 @@ $(function() {
 				 $("#avatarFormContainer").html(data);
 		     },
 		     error : function() {
+			 	//toastr是jquery消息提示插件
 		    	 toastr.error("error!");
 		     }
 		 });

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" data-th-fragment="header">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--    &lt;!&ndash; CSRF &ndash;&gt;
+        <meta name="_csrf" th:content="${_csrf.token}"/>
+        &lt;!&ndash; default header name is X-CSRF-TOKEN &ndash;&gt;
+        <meta name="_csrf_header" th:content="${_csrf.headerName}"/>-->
+
+    <!-- Tether core CSS -->
+    <link href="../../static/css/tether.min.css" th:href="@{/css/tether.min.css}" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Font-Awesome CSS -->
+    <link href="../../static/css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}" rel="stylesheet">
+
+    <!-- NProgress CSS -->
+    <link href="../../static/css/nprogress.css" th:href="@{/css/nprogress.css}" rel="stylesheet">
+
+    <!-- thinker-md CSS -->
+    <link href="../../static/css/thinker-md.vendor.css" th:href="@{/css/thinker-md.vendor.css}" rel="stylesheet">
+
+    <!-- bootstrap tags CSS -->
+    <link href="../../static/css/bootstrap-tagsinput.css" th:href="@{/css/jquery.tagsinput.min.css}" rel="stylesheet">
+
+    <!-- bootstrap chosen CSS -->
+    <link href="../../static/css/component-chosen.min.css" th:href="@{/css/component-chosen.min.css}" rel="stylesheet">
+
+    <!-- toastr CSS -->
+    <link href="../../static/css/toastr.min.css" th:href="@{/css/toastr.min.css}" rel="stylesheet">
+
+    <!-- jQuery image cropping plugin CSS -->
+    <link href="../../static/css/cropbox.css" th:href="@{/css/cropbox.css}" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+    <link href="../../static/css/thymeleaf-bootstrap-paginator.css" th:href="@{/css/thymeleaf-bootstrap-paginator.css}"
+          rel="stylesheet">
+    <link href="/static/css/blog.css" th:href="@{/css/blog.css}" rel="stylesheet">
+</head>
+
+
+<body>
+<div th:fragment="header">
+    <!--  <h1>Hello 1234</h1>
+      <a href="/users" th:href="@{~/users}">回到首页</a>
+  </div>-->
+    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button"
+                    data-target="#navbarsContainer" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/" th:href="@{~/users}">HelloBlog</a>
+
+            <div class="collapse navbar-collapse" id="navbarsContainer">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{~/users}">首页</a>
+                        <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+
+                <div sec:authorize="isAuthenticated()" class="row">
+                    <ul class="navbar-bar mr-auto">
+                        <li class="nav-item">
+                            <!--显示登录的用户名-->
+                            <span class="nav-link" sec:authentication="name"></span>
+                        </li>
+                    </ul>
+                    <form action="/logout" th:action="@{/logout}" method="post">
+                        <input class="btn btn-outline-success" type="submit" value="退出">
+                    </form>
+                </div>
+                <div sec:authorize="isAnonymous()">
+                    <a href="/login" th:href="@{~/login}" class="btn btn-outline-success my-2 my-sm-0"
+                       type="submit">登录</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </nav>
+</div>
+
+</body>
+</html>
