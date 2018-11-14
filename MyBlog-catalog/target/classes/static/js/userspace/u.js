@@ -100,6 +100,7 @@ $(function() {
 			 success: function(data){
 				 $("#catalogFormContainer").html(data);
 		     },
+
 		     error : function() {
 		    	 toastr.error("error!");
 		     }
