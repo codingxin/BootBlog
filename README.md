@@ -1,85 +1,91 @@
-**Ä½¿ÎÍøÊµÕ½¿Î³ÌÏîÄ¿-»ùÓÚSpring boot²©¿ÍµÄ´î½¨½Ì³Ì**
-**¼¼ÊõÕ»**
- * ºó¶Ë£º SpringBoot+ElasticSearch+SpringSecurity
+**æ…•è¯¾ç½‘å®æˆ˜è¯¾ç¨‹é¡¹ç›®-åŸºäºSpring bootåšå®¢çš„æ­å»ºæ•™ç¨‹**
+**æŠ€æœ¯æ ˆ**
+ * åç«¯ï¼š SpringBoot+ElasticSearch+SpringSecurity
 
- * Ç°¶Ë£º Thymeleaf/Bootstrap/jQuery
- * Êı¾İ¿â£ºMySQL/MongoDB/H2
- * ¼¼ÊõÓïÑÔ jdk 1.8
- * ¿ª·¢Æ½Ì¨ Idea 2018 +win10
+ * å‰ç«¯ï¼š Thymeleaf/Bootstrap/jQuery
+ * æ•°æ®åº“ï¼šMySQL/MongoDB/H2
+ * æŠ€æœ¯è¯­è¨€ jdk 1.8
+ * å¼€å‘å¹³å° Idea 2018 +win10
  ------
-ÏîÄ¿¼ò½é£º
+é¡¹ç›®ç®€ä»‹ï¼š
 
-[Ä½¿ÎÍøÊÓÆµ¼ò½é](https://coding.imooc.com/class/125.html)
-ÏîÄ¿Ô´Âë£º
+[æ…•è¯¾ç½‘è§†é¢‘ç®€ä»‹](https://coding.imooc.com/class/125.html)
+é¡¹ç›®æºç ï¼š
 
-[github²Ö¿âÔ´ÂëÏÂÔØ](https://github.com/994683607/BootBlog)
+[githubä»“åº“æºç ä¸‹è½½](https://github.com/994683607/BootBlog)
 
-Ä¿Â¼ÈçÏÂ£º
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120195552456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+ç›®å½•å¦‚ä¸‹ï¼š
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120195552456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
 
-²Ö¿â´úÂë
+ä»“åº“ä»£ç 
 
 ```
-|--MyBlog-auth: ¼ÓÈëÈÏÖ¤
+|--MyBlog-auth: åŠ å…¥è®¤è¯
 |--MyBlog-blog: 
-|--MyBlog-catalog  ¼ÓÈë·ÖÀà¹¦ÄÜ
-|--MyBlog-comment  ¼ÓÈëÆÀÂÛ¹¦ÄÜ
-|--MyBlog-prototype  ¼ÓÈë
-|--MyBlog-search       ¼ÓÈëËÑË÷¹¤³Ì
-|--MyBlog-tag            ¼ÓÈë±êÇ©¹¦ÄÜ
-|--MyBlog-user        ¼ÓÈëÓÃ»§¹¦ÄÜ
-|--MyBlog-vote:        ¼ÓÈëµãÔŞ¹¦ÄÜ
-|--MyBlog-index:        ×îÖÕÏîÄ¿
-elaseticsearch: ES¿Í»§¶Ë
-springbootEs£º²âÊÔESµÄ¹¤³ÌÏîÄ¿
-²©¿Í½ÌÑ§Ô´Âë£ºÄ½¿ÎÍøÔ´Âë£¨²Î¿¼ÆäÖĞµÄ¾²Ì¬×ÊÔ´£©
+|--MyBlog-catalog  åŠ å…¥åˆ†ç±»åŠŸèƒ½
+|--MyBlog-comment  åŠ å…¥è¯„è®ºåŠŸèƒ½
+|--MyBlog-prototype  åŠ å…¥
+|--MyBlog-search       åŠ å…¥æœç´¢å·¥ç¨‹
+|--MyBlog-tag            åŠ å…¥æ ‡ç­¾åŠŸèƒ½
+|--MyBlog-user        åŠ å…¥ç”¨æˆ·åŠŸèƒ½
+|--MyBlog-vote:        åŠ å…¥ç‚¹èµåŠŸèƒ½
+|--MyBlog-index:        æœ€ç»ˆé¡¹ç›®
+elaseticsearch: ESå®¢æˆ·ç«¯
+springbootEsï¼šæµ‹è¯•ESçš„å·¥ç¨‹é¡¹ç›®
+åšå®¢æ•™å­¦æºç ï¼šæ…•è¯¾ç½‘æºç ï¼ˆå‚è€ƒå…¶ä¸­çš„é™æ€èµ„æºï¼‰
 ```
-×¢£º Õû¸ö¹¤³ÌÊÇµü´ú¿ª·¢£¬²»ÊÇ¾ÛºÏÏîÄ¿¡£´Ó×î¿ªÊ¼µÄ»ù´¡ÏîÄ¿£¬¸´ÖÆÏîÄ¿ÔÙ¼ÓÈëĞÂ¹¦ÄÜÈç±êÇ©£¬µãÔŞ£¬ÆÀÂÛµÈºóÖØÃüÃû
+æ³¨ï¼š æ•´ä¸ªå·¥ç¨‹æ˜¯è¿­ä»£å¼€å‘ï¼Œä¸æ˜¯èšåˆé¡¹ç›®ã€‚ä»æœ€å¼€å§‹çš„åŸºç¡€é¡¹ç›®ï¼Œå¤åˆ¶é¡¹ç›®å†åŠ å…¥æ–°åŠŸèƒ½å¦‚æ ‡ç­¾ï¼Œç‚¹èµï¼Œè¯„è®ºç­‰åé‡å‘½å
 
 -----
-**ÒÑ¾­Íê³ÉµÄ¹¦ÄÜ£º**
-1.Ê×Ò³ËÑË÷      
-2.·ÖÀà¹ÜÀí
-3.ÓÃ»§¹ÜÀí      
-4.ÆÀÂÛ¹ÜÀí
-5.½ÇÉ«¹ÜÀí      
-6.µãÔŞ¹ÜÀí
-7.È¨ÏŞ¹ÜÀí     
-8.±êÇ©¹ÜÀí
-9.²©¿Í¹ÜÀí     
+**å·²ç»å®Œæˆçš„åŠŸèƒ½ï¼š**
+1.é¦–é¡µæœç´¢      
+2.åˆ†ç±»ç®¡ç†
+3.ç”¨æˆ·ç®¡ç†      
+4.è¯„è®ºç®¡ç†
+5.è§’è‰²ç®¡ç†      
+6.ç‚¹èµç®¡ç†
+7.æƒé™ç®¡ç†     
+8.æ ‡ç­¾ç®¡ç†
+9.åšå®¢ç®¡ç†     
 
 -------
-#  ÔËĞĞÏîÄ¿
-1.[ÏÂÔØÔ´Âë(https://github.com/994683607/BootBlog)£¬²¢½âÑ¹Ëõ
-2.µ¼ÈëÏîÄ¿ÃûÎªMyblog-indexÏîÄ¿µ½idea£¬µ¼Èëpom.xml¼´¿É£¬ÏêÇéÈçÏÂ¡£
+#  è¿è¡Œé¡¹ç›®
+## 1.[ä¸‹è½½æºç (https://github.com/994683607/BootBlog)ï¼Œå¹¶è§£å‹ç¼©
 
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120200709371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120200728967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
-3.±¾µØmysql·şÎñĞèÒª¿ªÆô£¬ÔÚÈÎÎñ¹ÜÀíÆ÷ÖĞ²é¿´mysql·şÎñÊÇ·ñÆô¶¯¡£Í¨¹ıÊı¾İ¿â¿ÉÊÓ»¯¹¤¾ßĞÂ½¨Êı¾İ¿âdb_testboot(ÔÚapplication.propertiesÅäÖÃÊı¾İ¿âÃû)×¢£º
-²»ĞèÒª½¨±í£¬±¾ÏîÄ¿»á×Ô¶¯½¨±í£¬ÅäÖÃÔÚapplication.propertiesÖĞ¡£
+## 2.å¯¼å…¥é¡¹ç›®åä¸ºMyblog-indexé¡¹ç›®åˆ°ideaï¼Œå¯¼å…¥pom.xmlå³å¯ï¼Œè¯¦æƒ…å¦‚ä¸‹ã€‚
 
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120201023662.png)
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120200709371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120200728967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
 
-ÌØ±ğ×¢ÒâĞèÒª½«ÉÏÍ¼Õâ¸öµØ·½¸ÄÎªÈçÏÂ
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120201119423.png)
-ÕâÊÇ×Ô¶¯½¨±íÅäÖÃ¡£
-4.Æô¶¯ES·şÎñ£¬ÔÚgithubÉÏÏÂÔØµÄÑ¹Ëõ°ü£¬Æô¶¯elasticsearch.bat¡£
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120201219767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
-5.µ¼ÈëÎÄ¼ş·şÎñÆ÷¹¤³ÌMongodb-file-server£¬¹¤³ÌÒ²ÔÚgitÉÏÑ¹Ëõ°ü¡£
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120201319813.png)
+## 3.æœ¬åœ°mysqlæœåŠ¡éœ€è¦å¼€å¯ï¼Œåœ¨ä»»åŠ¡ç®¡ç†å™¨ä¸­æŸ¥çœ‹mysqlæœåŠ¡æ˜¯å¦å¯åŠ¨ã€‚é€šè¿‡æ•°æ®åº“å¯è§†åŒ–å·¥å…·æ–°å»ºæ•°æ®åº“db_testboot(åœ¨application.propertiesé…ç½®æ•°æ®åº“å)æ³¨ï¼š
+ä¸éœ€è¦å»ºè¡¨ï¼Œæœ¬é¡¹ç›®ä¼šè‡ªåŠ¨å»ºè¡¨ï¼Œé…ç½®åœ¨application.propertiesä¸­ã€‚
+
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120201023662.png)
+
+ç‰¹åˆ«æ³¨æ„éœ€è¦å°†ä¸Šå›¾è¿™ä¸ªåœ°æ–¹æ”¹ä¸ºå¦‚ä¸‹
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120201119423.png)
+è¿™æ˜¯è‡ªåŠ¨å»ºè¡¨é…ç½®ã€‚
+## 4.å¯åŠ¨ESæœåŠ¡ï¼Œåœ¨githubä¸Šä¸‹è½½çš„å‹ç¼©åŒ…ï¼Œå¯åŠ¨elasticsearch.batã€‚
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120201219767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+
+## 5.å¯¼å…¥æ–‡ä»¶æœåŠ¡å™¨å·¥ç¨‹Mongodb-file-serverï¼Œå·¥ç¨‹ä¹Ÿåœ¨gitä¸Šå‹ç¼©åŒ…ã€‚
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120201319813.png)
 ------
-6.ÔËĞĞÎÄ¼ş·şÎñÆ÷ºÍMyBlog-indexµÄspringbootÆô¶¯Èë¿ÚFileApplication.java£¨8081¶Ë¿Ú£©ºÍ
-MyBlogApplication.java£¨8080¶Ë¿Ú£©
-7.²âÊÔ£º
-*ÊäÈë127.0.0.1:8081²âÊÔÎÄ¼ş·şÎñÆ÷µØÖ·¡£
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120201823452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
-ÊäÈë127.0.0.1:8080/index£¬
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/201811202028369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
-API²âÊÔ¹¤¾ß£º[swagger¼ò½é](https://blog.csdn.net/qq_35180973/article/details/84191759)£¬
-ÊäÈëµØÖ·[http://localhost:8080/swagger-ui.html#!/admin-controller/listUsersUsingGET](http://localhost:8080/swagger-ui.html#!/admin-controller/listUsersUsingGET)
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120203048824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+## 6.è¿è¡Œæ–‡ä»¶æœåŠ¡å™¨å’ŒMyBlog-indexçš„springbootå¯åŠ¨å…¥å£FileApplication.javaï¼ˆ8081ç«¯å£ï¼‰å’Œ
+MyBlogApplication.javaï¼ˆ8080ç«¯å£ï¼‰
+## 7.æµ‹è¯•ï¼š
+*è¾“å…¥127.0.0.1:8081æµ‹è¯•æ–‡ä»¶æœåŠ¡å™¨åœ°å€ã€‚*
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120201823452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+*è¾“å…¥127.0.0.1:8080/indexï¼Œ*
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/201811202028369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+
+APIæµ‹è¯•å·¥å…·ï¼š
+[swaggerç®€ä»‹](https://blog.csdn.net/qq_35180973/article/details/84191759)ï¼Œ
+è¾“å…¥åœ°å€[http://localhost:8080/swagger-ui.html#!/admin-controller/listUsersUsingGET](http://localhost:8080/swagger-ui.html#!/admin-controller/listUsersUsingGET)
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120203048824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
 
 
 -----
-# Ä½¿ÎÍøÊ×Ò³Ô¤ÀÀ              
-![ÔÚÕâÀï²åÈëÍ¼Æ¬ÃèÊö](https://img-blog.csdnimg.cn/20181120200138673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
+
+# æ…•è¯¾ç½‘é¦–é¡µé¢„è§ˆ              
+![åœ¨è¿™é‡Œæ’å…¥å›¾ç‰‡æè¿°](https://img-blog.csdnimg.cn/20181120200138673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1MTgwOTcz,size_16,color_FFFFFF,t_70)
