@@ -1,0 +1,15 @@
+[2018-11-20 13:22:26,743][INFO ][node                     ] [Foolkiller] version[2.4.1], pid[8836], build[c67dc32/2016-09-27T18:57:55Z]
+[2018-11-20 13:22:26,780][INFO ][node                     ] [Foolkiller] initializing ...
+[2018-11-20 13:22:29,142][INFO ][plugins                  ] [Foolkiller] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2018-11-20 13:22:29,404][INFO ][env                      ] [Foolkiller] using [1] data paths, mounts [[软件 (D:)]], net usable_space [69.9gb], net total_space [111gb], spins? [unknown], types [NTFS]
+[2018-11-20 13:22:29,487][INFO ][env                      ] [Foolkiller] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-11-20 13:22:45,763][INFO ][node                     ] [Foolkiller] initialized
+[2018-11-20 13:22:45,764][INFO ][node                     ] [Foolkiller] starting ...
+[2018-11-20 13:22:54,181][INFO ][transport                ] [Foolkiller] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2018-11-20 13:22:54,221][INFO ][discovery                ] [Foolkiller] elasticsearch/4cYlLrczQv-jFBikVnFw2w
+[2018-11-20 13:22:58,369][INFO ][cluster.service          ] [Foolkiller] new_master {Foolkiller}{4cYlLrczQv-jFBikVnFw2w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2018-11-20 13:22:58,962][INFO ][gateway                  ] [Foolkiller] recovered [1] indices into cluster_state
+[2018-11-20 13:23:02,149][INFO ][cluster.routing.allocation] [Foolkiller] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[blog][2], [blog][2]] ...]).
+[2018-11-20 13:23:08,356][INFO ][http                     ] [Foolkiller] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2018-11-20 13:23:08,357][INFO ][node                     ] [Foolkiller] started
+[2018-11-20 13:27:31,836][INFO ][cluster.metadata         ] [Foolkiller] [blog] update_mapping [blog]
