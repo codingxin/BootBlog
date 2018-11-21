@@ -6,6 +6,7 @@
  * 数据库：MySQL/MongoDB/H2
  * 技术语言 jdk 1.8
  * 开发平台 Idea 2018 +win10
+ 视频中老师采用gradle进行源码控制，本仓库改为了maven仓库。
  ------
 项目简介：
 
